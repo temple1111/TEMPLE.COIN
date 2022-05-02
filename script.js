@@ -6,7 +6,7 @@ const XYM_ID = '3A8416DB2D53B6C8'
 const NODE_URL = 'https://sym-test.opening-line.jp:3001'
 const NET_TYPE = symbol.NetworkType.TEST_NET
 
-const address = symbol.Address.createFromRawAddress("TB7LJMKZNAPLRNCZEMLH6LZZVBXID4G7F3YTCNY")
+const address = symbol.Address.createFromRawAddress("TDW2WEV6IA37S2KHHWJ7CDI3TCBKS2VI53ENEMQ")
 
 console.log("Hello Symbol")
 console.log(`Your Address : ${address.plain()}`)
