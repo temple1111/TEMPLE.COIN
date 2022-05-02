@@ -6,7 +6,7 @@ const XYM_ID = '3A8416DB2D53B6C8'
 const NODE_URL = 'https://sym-test.opening-line.jp:3001'
 const NET_TYPE = symbol.NetworkType.TEST_NET
 
-const address = symbol.Address.createFromRawAddress("TDW2WEV6IA37S2KHHWJ7CDI3TCBKS2VI53ENEMQ")
+const address = symbol.Address.createFromRawAddress("TB7LJMKZNAPLRNCZEMLH6LZZVBXID4G7F3YTCNY")
 
 console.log("Hello Symbol")
 console.log(`Your Address : ${address.plain()}`)
@@ -90,4 +90,32 @@ function handleClick() {
   const signedTx = acc.sign(tx, GENERATION_HASH)
 
   transactionHttp.announce(signedTx)
+}
+
+function handleSSS() {
+  console.log('handle sss')
+  const addr = document.getElementById('form-addr').value
+  const amount = document.getElementById('form-amount').value
+  const message = document.getElementById('form-message').value
+  
+  const tx = symbol.TransferTransaction.create(
+    symbol.Deadline.create(EPOCH),
+    symbol.Address.createFromRawAddress(addr),
+    [
+      new symbol.Mosaic(
+        new symbol.MosaicId(XYM_ID),
+        symbol.UInt64.fromUint(Number(amount))
+      )
+    ],
+    symbol.PlainMessage.create(message),
+    NET_TYPE,
+    symbol.UInt64.fromUint(2000000)
+  )
+
+  window.SSS.setTransaction(tx)
+
+  window.SSS.requestSign().then(signedTx => {
+    console.log('signedTx', signedTx)
+    transactionHttp.announce(signedTx)
+  })
 }
