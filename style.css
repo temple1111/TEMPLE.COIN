@@ -2,7 +2,7 @@ body {
   background-image: url(https://beiz.jp/images_P/wallpaper/wallpaper_00313.jpg);
   background-repeat: no-repeat;
   background-position:50% 50%;
-  background-size:contain;
+  background-size:100%;
 }
 
 /*h1 {*/
