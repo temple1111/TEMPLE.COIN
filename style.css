@@ -1,5 +1,8 @@
 body {
-  background: rgb(242, 242, 242);
+  background-image: url(https://realpay.jp/finance/wp-content/uploads/2021/10/symbol.jpg);
+  background-repeat: no-repeat;
+  background-position:50% 50%;
+  background-size:cover;
 }
 
 h1 {
