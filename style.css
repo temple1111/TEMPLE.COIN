@@ -5,12 +5,12 @@ body {
   background-size:contain;
 }
 
-h1 {
-  color:rgba(22, 22, 22, 0.4);
-  font-size: 96px;
-  text-align: right;
-  margin-right: 80px;
-}
+/*h1 {*/
+/*  color:rgba(22, 22, 22, 0.4);*/
+/*  font-size: 96px;*/
+/*  text-align: right;*/
+/*  margin-right: 80px;*/
+/*}*/
 
 .left {
   width: 800px;
@@ -20,21 +20,24 @@ h1 {
 }
 
 .account-card {
-  background: white;
+  background-color: rgba( 0, 0, 0, 0.55 );
+  color: white;
   border-radius: 16px;
   margin: 16px;
   padding: 16px;
 }
 
 .sender-card {
-  background: white;
+  background-color: rgba( 0, 0, 0, 0.55 );
+  color: white;
   border-radius: 16px;
   margin: 16px;
   padding: 16px;
 }
 
 .tx-card {
-  background: white;
+  background-color: rgba( 0, 0, 0, 0.55 );
+  color: white;
   border-radius: 16px;
   padding: 32px;
   width: 1200px;
