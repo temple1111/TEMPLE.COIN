@@ -1,10 +1,12 @@
 const symbol = require('/node_modules/symbol-sdk')
 
-const GENERATION_HASH = '7FCCD304802016BEBBCD342A332F91FF1F3BB5E902988B352697BE245F48E836'
-const EPOCH = 1637848847
-const XYM_ID = '3A8416DB2D53B6C8'
-const NODE_URL = 'https://sym-test.opening-line.jp:3001'
-const NET_TYPE = symbol.NetworkType.TEST_NET
+
+const GENERATION_HASH = '57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6'
+const EPOCH = 1615853185
+const XYM_ID = '2A30D04FF35E8641'
+const NODE_URL = 'https://sym-main.opening-line.jp:3001'
+const NET_TYPE = symbol.NetworkType.MAIN_NET
+
 
 const repositoryFactory = new symbol.RepositoryFactoryHttp(NODE_URL)
 const accountHttp = repositoryFactory.createAccountRepository()
@@ -23,7 +25,7 @@ accountHttp.getAccountInfo(address)
     for (let m of accountInfo.mosaics) {
       if (m.id.id.toHex() === XYM_ID) {
         const dom_xym = document.getElementById('wallet-xym')
-        dom_xym.innerText = `XYM 残高 : ${m.amount.compact() / Math.pow(10, 6)}`
+        dom_xym.innerText = `TEMPLE.coin : ${m.amount.compact() / Math.pow(10, 6)}`
       }
     }
   })
