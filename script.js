@@ -14,7 +14,7 @@ const transactionHttp = repositoryFactory.createTransactionRepository()
 
 setTimeout(() => {
   
-const address = symbol.Address.createFromRawAddress(window.SSS.activeAddress)
+const address = symbol.Address.createFromRawAddress("NA3IJDNVLKUKQSQJYCX4ZKK55U4YKY26IOJV6ZQ")
 
 const dom_addr = document.getElementById('wallet-addr')
 dom_addr.innerText = address.pretty()
@@ -25,7 +25,7 @@ accountHttp.getAccountInfo(address)
     for (let m of accountInfo.mosaics) {
       if (m.id.id.toHex() === XYM_ID) {
         const dom_xym = document.getElementById('wallet-xym')
-        dom_xym.innerText = `TEMPLE.coin : ${m.amount.compact() / Math.pow(10, 6)}`
+        dom_xym.innerText = `TEMPLE.moter ポイント : ${m.amount.compact() / Math.pow(10, 6)}`
       }
     }
   })
